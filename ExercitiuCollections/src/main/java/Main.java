@@ -95,6 +95,32 @@ public class Main {
         int minimum = Collections.min(numbers);
 
         System.out.println("Minimul si maximul sunt " + minimum + " " + maximum);
+
+     //Colectia Map
+     //Sa se declare un Map care sa se stocheze fiecare tara cu capitala
+
+        Map<String,String> countryCapitalMap = new HashMap<String,String>();
+        countryCapitalMap.put("Romania", "Bucharest");
+        countryCapitalMap.put("Hungary","Budapest");
+        countryCapitalMap.put("Bulgaria","Sofia");
+
+        //pereche key-> value putem sa luam din map, valoarea in functie de key(daca o stim)
+        System.out.println("Capitala Ungariei este " + countryCapitalMap.get("Hungary"));
+        System.out.println("Capitala Bulgariei este " + countryCapitalMap.get("Sofia"));
+
+        //map care contine numele persoanelor si varstele lor
+        Map<String,Integer> personAgeMap = new HashMap<String,Integer>();
+        personAgeMap.put("Popescu",25);
+        personAgeMap.put("Ionescu",36);
+
+        System.out.println("Varsta lui Ionescu este " + personAgeMap.get("Ionescu"));
+
+        //parcurgem un map
+        Set<String> countryCapitalKeys= countryCapitalMap.keySet();
+        for(String key: countryCapitalKeys){
+            System.out.println("Valoarea din map CountryCapitalMap aferenta ale cheii " + key + " este " + countryCapitalMap.get(key));
+        }
+
     }
 
 }
